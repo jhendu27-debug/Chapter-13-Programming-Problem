@@ -18,3 +18,13 @@ so one failed spell would not stop the others from running.
 
 If the try-catch was outside the loop, one exception could stop
 the remaining spells from being attempted.
+
+# Phase 3 
+
+I added file writing using PrintWriter and FileWriter.
+Every spell attempt is now recorded in spell_log.txt,
+including successful spells and failed spells.
+
+I used try-with-resources because it automatically closes
+the file after writing. This helps prevent resource leaks
+and keeps the code simple.
