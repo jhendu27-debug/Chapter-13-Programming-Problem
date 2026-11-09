@@ -38,3 +38,16 @@ does not exist.
 I learned that FileNotFoundException is a checked
 exception, so Java requires us to handle it or declare it.
 I used try-with-resources to close the reader automatically.
+
+# Phase 5 
+
+I tested the completed program and verified that all five
+spells were attempted. The program handled successful casts,
+mana leaks, and fizzles without crashing.
+
+I also tested the log file and confirmed that it displayed
+the casting history. Testing a missing file helped me
+understand how Java handles file errors.
+
+This assignment helped me understand checked exceptions,
+try-catch blocks, and reading and writing files in Java.
