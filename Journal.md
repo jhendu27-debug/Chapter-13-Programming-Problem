@@ -1,6 +1,6 @@
 # Journal
 
-Phase 1 Journal
+# Phase 1 
 
 I created the custom SpellException class and the two subclasses,
 ManaLeakException and FizzleException. I also created the SpellCaster
@@ -10,3 +10,11 @@ I learned that checked exceptions must be handled with try-catch
 or declared with throws. Unchecked exceptions do not require
 the programmer to handle them.
 
+# Phase 2 
+
+I added an ArrayList containing five different spells and used
+a loop to cast each one. I placed the try-catch inside the loop
+so one failed spell would not stop the others from running.
+
+If the try-catch was outside the loop, one exception could stop
+the remaining spells from being attempted.
