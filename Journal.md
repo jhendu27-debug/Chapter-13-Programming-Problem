@@ -28,3 +28,13 @@ including successful spells and failed spells.
 I used try-with-resources because it automatically closes
 the file after writing. This helps prevent resource leaks
 and keeps the code simple.
+
+# Phase 4 
+
+I added the readLog method to read the spell history
+from spell_log.txt. I also tested reading a file that
+does not exist.
+
+I learned that FileNotFoundException is a checked
+exception, so Java requires us to handle it or declare it.
+I used try-with-resources to close the reader automatically.

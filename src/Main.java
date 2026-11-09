@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class Main {
 
@@ -30,6 +34,34 @@ public class Main {
             }
 
             System.out.println("----------------------");
+        }
+
+        System.out.println("\n===== SPELL CASTING HISTORY =====");
+
+        readLog("spell_log.txt");
+
+        System.out.println("\n===== TESTING MISSING FILE =====");
+
+        readLog("missing_grimoire.txt");
+    }
+
+    public static void readLog(String fileName) {
+
+        try (BufferedReader reader =
+                     new BufferedReader(new FileReader(fileName))) {
+
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("Error: File not found: " + fileName);
+        }
+        catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
         }
     }
 }
